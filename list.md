@@ -3,7 +3,7 @@ Basic vimrc configuration list
 
 
 ### 1 - Basic
-```
+```vim
 set nocompatible " Use VIM settings rather than 
                  " Vi settings; this *must* be
                  " first in .vimrc 
@@ -45,7 +45,7 @@ set completeopt=longest,menuone
 ```
 
 ### 2 - AUTOCOMPLETE in specific languages
-```
+```vim
 "
 " AUTOCOMPLETE in specific languages
 " ----------------------------------------
@@ -63,7 +63,7 @@ autocmd FileType hpp        setlocal omnifunc=omni#cpp#complete#Main
 ```
 
 ### 3 - AUTOCMD by file type
-```
+```vim
 "
 " AUTOCMD by file type
 " ----------------------------------------
@@ -78,7 +78,7 @@ endif
 ```
 
 ### 4 - DISABLE arrow keys
-```
+```vim
 "
 " DISABLE arrow keys
 " ----------------------------------------
@@ -94,7 +94,7 @@ inoremap <right> <nop>
 ```
 
 ### 5 - Automatic CLOSING
-```
+```vim
 "
 " Automatic CLOSING
 " ----------------------------------------
@@ -136,7 +136,7 @@ inoremap {;<CR> {<CR>};<ESC>O<TAB>
 ```
 
 ### 6 - SHORTCUTS 
-```
+```vim
 "
 " SHORTCUTS 
 " ----------------------------------------
@@ -148,7 +148,7 @@ inoremap <leader>W <c-o>:wa!<cr>
 ```
 
 ### 7 - HIGHLIGHT WORD under the cursor
-```
+```vim
 " HIGHLIGHT WORD under the cursor
 noremap <leader>hw :let @/="<C-r><C-w>"<cr>
 
@@ -157,7 +157,7 @@ noremap <leader>hc :let @/=''<cr>
 ```
 
 ### 8 - LOWERCASE
-```
+```vim
 "
 " LOWERCASE
 " ----------------------------------------
@@ -174,20 +174,20 @@ cab BD bd|cab Bd bd|cab bD bd
 ```
 
 ### 9 - REMOVE the TAGS and keep the text
-```
+```vim
 " REMOVE the TAGS and keep the text
 cab rm_tag %s#<[^>]\+>##g
 ```
 
 ### 10 - HIGHLIGHT cursor line
-```
+```vim
 " HIGHLIGHT cursor line
 set cul
 hi cursorline cterm=NONE ctermbg=black guibg=lightgrey
 ```
 
 ### 11 - LOAD VIMRC without closing the editor
-```
+```vim
 " LOAD VIMRC without closing the editor
 map ,u :source /etc/vim/vimrc<CR>:echo ' VIMRC global loaded!'<CR>
 " map ,u :source ~/.vim/vimrc<CR>:echo ' VIMRC local reloaded!'<CR>
